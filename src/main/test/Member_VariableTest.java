@@ -19,11 +19,24 @@ public class Member_VariableTest {
     }
     @Test
 
-        public void givenParametersShouldReturnSuccess()
+        public void givenNameAgeSalaryShouldReturnSuccess()//Test case for all valid values
         {
-    Member_Variable obj=new Member_Variable();
     String result=obj.member_variable("mugen",27,(float)27.45);
-    assertEquals("Success",result);
+    assertEquals("mugen2727.45",result);
         }
+    @Test
+    public void givenNullAgeSalaryShouldReturnException()//test case for null name
+    {
+        String result=obj.member_variable(null,27,(float)27.45);
+
+
+    }
+    @Test
+    public void givenNameZeroSalaryShouldReturnSuccess()//test case for age zero
+    {
+        String result=obj.member_variable("mugen",0,(float)27.45);
+
+    }
+
 
 }

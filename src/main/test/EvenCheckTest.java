@@ -18,24 +18,31 @@ public class EvenCheckTest {
     }
 
     @Test
-    public void givenOddNumberShouldReturnFalse()
+    public void givenOddNumberShouldReturnFalse()//test case for odd number
     {
 
         boolean result=obj.checkeven(3);
         assertEquals(false,result);
     }
     @Test
-    public void givenEvenNumberShouldReturnTrue()
+    public void givenEvenNumberShouldReturnTrue()//test case for even number
     {
 
         boolean result=obj.checkeven(4);
         assertEquals(true,result);
     }
-    @Test(expected = NullPointerException.class)
+    @Test(expected = NullPointerException.class)//test case for null
     public void givenNullShouldReturnNull()
     {
 
         boolean result=obj.checkeven(null);
+    }
+    @Test
+    public void givenNegativeEvenShouldReturnTrue()//test case for negative even number
+    {
+
+        boolean result=obj.checkeven(-4);
+        assertEquals(true,result);
     }
 
 }

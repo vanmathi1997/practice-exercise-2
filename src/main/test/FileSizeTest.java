@@ -17,7 +17,7 @@ public class FileSizeTest {
         obj=null;
     }
     @Test
-    public void givenFileShouldReturnCount()
+    public void givenFileShouldReturnCount()//test case for displaying file
     {
         FileSize obj=new FileSize();
         obj.displayFile();

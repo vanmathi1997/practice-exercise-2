@@ -6,15 +6,16 @@
 
             int length = input.length();
 
-            for (int i = length - 1; i >= 0; i--) {
+            for (int i = length - 1; i >= 0; i--) //condition to check the palindrome
+            {
                 temp = temp + input.charAt(i);
             }
             if (input.equals(temp)) {
 
-                return true;
+                return true;//returning true if the input is palindrome
 
             } else {
-                return false;
+                return false;//returning false if the input is not a palindrome
             }
 
         }

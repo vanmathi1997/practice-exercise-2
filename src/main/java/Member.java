@@ -4,23 +4,27 @@ public class Member {
     int Age;
     float Salary;
 
-    Member(String name, int age, float salary){
+    Member(String name, int age, float salary)//constructor class for assigning values
+    {
+
         Name = name;
         Age = age;
         Salary = salary;
     }
-    public void DisplayMemberDetails(){
-        System.out.println("Name: " + Name);
-        System.out.println("Age: " + Age);
-        System.out.println("Salary: " + Salary);
+    public String DisplayMemberDetails()//displaying the MemberDetails
+     {
+        if(Name==null||Age==0||Salary==0)
+            return null;
+        else
+       return Name+ Age +Salary;
     }
 }
 
 class Member_Variable{
     public String member_variable(String name, int age, float salary){
         Member member = new Member(name, age, salary);
-        member.DisplayMemberDetails();
-        return "Success";
+        String result= member.DisplayMemberDetails();
+        return result;
 
     }
 }

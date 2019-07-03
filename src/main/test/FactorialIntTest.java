@@ -18,16 +18,17 @@ public class FactorialIntTest {
     }
 
     @Test
-    public void givenNumberShouldReturnResult()
+    public void givenNumberShouldReturnResult()//Test case for number
     {
         assertEquals(120,obj.printFactorial((long) 5));
     }
     @Test
-    public void givenZeroShouldReturnZero()
+    public void givenZeroShouldReturnOne()//test case for zero
+
     {
-        assertEquals(0,obj.printFactorial((long) 0));
+        assertEquals(1,obj.printFactorial((long) 0));
     }
-    @Test(expected = NullPointerException.class)
+    @Test(expected = NullPointerException.class)//test case for null
     public void givenNullShouldReturnNull()
     {
 

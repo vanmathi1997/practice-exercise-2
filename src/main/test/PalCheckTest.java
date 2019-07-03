@@ -19,19 +19,25 @@ import org.junit.Test;
         }
         @Test
         public  void givenPalStringShouldReturnTrue(){
-            boolean result= PalCheck.isPalindrome("madam");
+            boolean result= PalCheck.isPalindrome("madam");//test case for palindrome
             assertEquals(true,result);
 
         }
         @Test
         public  void givenNonPalStringShouldReturnFalse(){
-            boolean result= PalCheck.isPalindrome("Never");
+            boolean result= PalCheck.isPalindrome("Never");//test case for non palindrome
             assertEquals(false,result);
 
         }
         @Test(expected = NullPointerException.class)
         public  void givenNullStringShouldReturnNull(){
-            boolean result= PalCheck.isPalindrome(null);
+            boolean result= PalCheck.isPalindrome(null);//test case for null
+        }
+
+        @Test
+        public  void givenNumbersStringShouldReturn(){
+        boolean result= PalCheck.isPalindrome("12321");//test case for number palindrome
+            assertEquals(true,result);
 
 
         }

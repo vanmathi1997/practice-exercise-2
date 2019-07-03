@@ -19,14 +19,14 @@ public class StudentGradesTest {
     }
 
     @Test
-    public void testgivenArrayShouldReturnMaximum()
+    public void testgivenArrayShouldReturnMaximum()//test case for maximum method
     {
         int actual = grades.maximum(array,5);
         assertEquals(83,actual);
     }
 
     @Test
-    public void testgivenArrayShouldReturnMinimum()
+    public void testgivenArrayShouldReturnMinimum()//test case for minimum method
     {
 
         int actual = grades.minimum(array,5);
@@ -34,10 +34,23 @@ public class StudentGradesTest {
     }
 
     @Test
-    public void testgivenArrayShouldReturnAverage()
+    public void testgivenArrayShouldReturnAverage()//test case for average
     {
         double actual = grades.average(array,5);
-        assertEquals(72,actual,0);
+       assertEquals(72,actual,0);
     }
+    @Test(expected = ArithmeticException.class)
+    public void testgivenArrayLengthZeroShouldReturnException()//test case for exception
+    {
+        double actual = grades.average(array,0);
+
+    }
+    @Test
+    public void testgivenArrayShouldReturnNotReturnWrongValue()//test case for assertNotEquals
+    {
+        double actual = grades.average(array,5);
+        assertNotEquals(71,actual);
+    }
+
 
 }
